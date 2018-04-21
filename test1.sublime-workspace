@@ -1,0 +1,784 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bise",
+				"bisect_left"
+			],
+			[
+				"bisect_",
+				"bisect_right"
+			],
+			[
+				"hapi",
+				"happiness"
+			],
+			[
+				"ha",
+				"happiness"
+			],
+			[
+				"_",
+				"_w2"
+			],
+			[
+				"max_",
+				"max_int_2"
+			],
+			[
+				"max",
+				"max_iter"
+			],
+			[
+				"ma",
+				"max_iter"
+			],
+			[
+				"coll",
+				"collision_space"
+			],
+			[
+				"ode",
+				"odeconfig"
+			],
+			[
+				"filename",
+				"file_base_name"
+			],
+			[
+				"img",
+				"img_dir"
+			],
+			[
+				"php",
+				"php_file"
+			],
+			[
+				"moth",
+				"moths_of_borneo"
+			],
+			[
+				"proje",
+				"projection_submit"
+			],
+			[
+				"e",
+				"endif"
+			],
+			[
+				"Ve",
+				"VecD"
+			],
+			[
+				"s",
+				"std"
+			],
+			[
+				"V",
+				"VecD"
+			],
+			[
+				"en",
+				"end"
+			],
+			[
+				"begi",
+				"begin"
+			],
+			[
+				"sub",
+				"subfamily_name"
+			],
+			[
+				"su",
+				"subfamily_name_dic"
+			],
+			[
+				"pre",
+				"pre_subfamily_name"
+			],
+			[
+				"w",
+				"write"
+			],
+			[
+				"fa",
+				"family_name"
+			],
+			[
+				"__",
+				"__FIRST__"
+			],
+			[
+				"re",
+				"readline"
+			],
+			[
+				"f_",
+				"f_write"
+			],
+			[
+				"get_",
+				"get_figure_url"
+			],
+			[
+				"r",
+				"r"
+			],
+			[
+				"fi",
+				"figure_url_list"
+			],
+			[
+				"file",
+				"filename_list"
+			],
+			[
+				"name",
+				"name"
+			],
+			[
+				"ex",
+				"_extracted"
+			],
+			[
+				"exc",
+				"exclude2"
+			],
+			[
+				"str",
+				"str_list"
+			],
+			[
+				"u",
+				"urljoin"
+			],
+			[
+				"parse",
+				"parse_dir_contents"
+			],
+			[
+				"par",
+				"parse_dir_contents"
+			],
+			[
+				"Dmo",
+				"DmozItem"
+			],
+			[
+				"la",
+				"latexmk"
+			],
+			[
+				"tex",
+				"texlive"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Assets/Script/CubeControl.cs.meta",
+			"settings":
+			{
+				"buffer_size": 263,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Script/CubeControl.cs",
+			"settings":
+			{
+				"buffer_size": 474,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Makefile/Make.sublime-build",
+				"Clean"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/make_run.sublime-build",
+					""
+				],
+				[
+					"Packages/User/make_run.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/graphvis.sublime-build",
+					""
+				],
+				[
+					"Packages/User/graphvis.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/graphvis.sublime-build",
+					"View"
+				]
+			],
+			[
+				"Packages/User/graphvis.sublime-build",
+				"View"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/graphvis.sublime-build",
+					""
+				],
+				[
+					"Packages/User/graphvis.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/graphvis.sublime-build",
+					"View"
+				],
+				[
+					"Packages/User/make_run.sublime-build",
+					""
+				],
+				[
+					"Packages/User/make_run.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/graphvis.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/make_run.sublime-build",
+					""
+				],
+				[
+					"Packages/User/make_run.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/make_run.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 170.0,
+		"last_filter": "install ",
+		"selected_items":
+		[
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"a",
+				"Git: Add..."
+			],
+			[
+				"package control ins",
+				"Package Control: Install Package"
+			],
+			[
+				"aling",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"git commit",
+				"Git: Commit history"
+			],
+			[
+				"git add",
+				"Git: Add All"
+			],
+			[
+				"git commi",
+				"Git: Commit"
+			],
+			[
+				"git rm",
+				"Git: Commit history"
+			],
+			[
+				"git ",
+				"Git: Commit"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"Git",
+				"Git: Init"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package controll",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 540.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			"import urllib2,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation') ",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"Git:Init",
+			"make",
+			"1 + 1",
+			"i + a",
+			"import numpy",
+			"ls",
+			"sublime.run_command(\"latextools_migrate\")",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Public/Documents/Unity Projects/test1",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/Script",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/UnityChan",
+		"/C/Users/Public/Documents/Unity Projects/test1/Library",
+		"/C/Users/Public/Documents/Unity Projects/test1/obj",
+		"/C/Users/Public/Documents/Unity Projects/test1/ProjectSettings"
+	],
+	"file_history":
+	[
+		"/C/Users/hiromi/script/atcoder/20171104/c.py",
+		"/C/Users/Public/Documents/Unity Projects/test1/test1.sublime-project",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/Script/CubeControl.cs",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/UnityChan/Scripts/UnityChanControlScriptWithRgidBody.cs",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/Script/SceneManager.cs",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/Script/mouseraycast.cs",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/Script/cubecontroller.cs",
+		"/C/Users/Public/Documents/Unity Projects/test1/Assets/Script/PlayerController.cs",
+		"/C/Users/hiromi/script/atcoder/20171104/d.py",
+		"/C/Users/Public/Documents/Unity Projects/SublimeText.sublime-project",
+		"/C/Users/hiromi/Downloads/Readme.txt",
+		"/C/Users/hiromi/Desktop/clirenda/readme.txt",
+		"/C/Users/hiromi/script/atcoder/binary_search.py",
+		"/G/backup/wp/parmalink.txt",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_1_clipaction1).as",
+		"/C/Users/hiromi/Downloads/img20050211.flm",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[2]__depth1/ActionScript/img20050211[2]__depth1(frame1_sprite42_1_clipaction32).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[2]__depth1/ActionScript/img20050211[2]__depth1(frame1_sprite48_45_clipaction47).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[2]__depth1/ActionScript/img20050211[2]__depth1(frame1_sprite58_1_clipaction1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[2]__depth1/ActionScript/img20050211[2]__depth1(frame1_sprite58_1_clipaction44).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[2]__depth1/ActionScript/img20050211[2]__depth1(frame1_sprite58_2_clipaction44).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_8).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_7).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_6).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_5).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_4).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite48_22).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_3).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_1_clipaction44).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_2_clipaction44).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_2).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite58_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite48_45_clipaction47).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_41).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_42).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_43).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_44).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_46).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_47).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_48).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_49).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite32_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite32_2).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite39_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite40_6).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite42_1_clipaction32).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite48_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite42_3).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite48_5).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite48_7).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite48_14).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite40_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite48_45).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame1_clipaction1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite7_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/readme.txt",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite26_5).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite28_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite19_4).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite19_2).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite19_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite12_3).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite12_2).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite12_1).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite7_3).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211[1]/ActionScript/img20050211(frame2_sprite7_2).as",
+		"/C/Users/hiromi/Downloads/hugflash2_9_5/img20050211/img20050211.log",
+		"/C/Users/hiromi/Downloads/changelog.txt",
+		"/C/Users/hiromi/Desktop/DDCC.py",
+		"/C/Users/hiromi/Desktop/B.py",
+		"/C/Users/hiromi/Desktop/D.cpp",
+		"/C/Users/hiromi/Desktop/C.cpp",
+		"/E/Documents/mydocument/pSADaDAsYESs.txt",
+		"/C/Users/hiromi/.tcjudgerc",
+		"/C/Users/hiromi/script/topcoder/RememberWords.cpp",
+		"/C/Users/hiromi/Desktop/gk-portfolio/header.php",
+		"/C/Users/hiromi/Desktop/C-4N.cpp",
+		"/C/Users/hiromi/script/topcoder/BallsConverter.cpp",
+		"/C/Program Files/Sublime Text 3/d.cpp",
+		"/C/Program Files/Sublime Text 3/c.cpp",
+		"/C/Program Files/Sublime Text 3/b.cpp",
+		"/C/Program Files/Sublime Text 3/a.cpp",
+		"/C/Users/hiromi/Downloads/decoder_name.txt",
+		"/C/Users/hiromi/Downloads/更新履歴.txt",
+		"/C/Users/hiromi/Downloads/AGDRec_131F/readme.txt",
+		"/E/Pictures/mypicture/デジカメ/2017/07.28~29野麦峠白骨/種名.txt",
+		"/C/Users/hiromi/Videos/VR_MANGR.IFO",
+		"/C/Users/hiromi/Downloads/enginemoth.wordpress.2017-01-08.xml",
+		"/C/Users/hiromi/Desktop/page.txt",
+		"/C/Dell/DownloadStore/mp4_high_2049091.mp4",
+		"/C/Users/hiromi/AppData/Local/Temp/dd_error_vb_xcor_90.txt",
+		"/E/Documents/mydocument/es.txt",
+		"/E/Documents/mydocument/siukatu.txt",
+		"/E/Documents/mydocument/就活/富士通.txt",
+		"/E/Documents/mydocument/就活/kawasakizyuukou.txt",
+		"/E/Documents/mydocument/就活/gpa.py",
+		"/E/Documents/mydocument/就活/キヤノン.txt",
+		"/E/Documents/mydocument/就活/ジョブマッチング.txt",
+		"/E/Documents/mydocument/就活/toyota.txt",
+		"/E/Documents/mydocument/mensetu.txt",
+		"/C/Users/hiromi/Downloads/AGDRec_131F/AGMPlayer/readme.txt",
+		"/E/Documents/mydocument/insect/南米調査項目.txt",
+		"/E/Documents/mydocument/名瀬小湊の水田",
+		"/E/Documents/mydocument/雑務/sony_intern.txt",
+		"/E/Documents/game/プロダクションラプソディ/このゲームについて.txt",
+		"/E/Documents/ssh/id_rsa.pub",
+		"/E/Documents/ssh/id_rsa",
+		"/C/Users/hiromi/Downloads/201701110218C/アパーチャ・リスト.txt",
+		"/C/Users/hiromi/Downloads/201701110218C/L1SILK.GBR",
+		"/C/Users/hiromi/Downloads/201701110218C/Mount.txt",
+		"/C/Users/hiromi/Downloads/201510150091C/NOBY_LIMBS_TACTILE4.txt",
+		"/C/Users/hiromi/AppData/Local/Temp/~EXTMP00/201701110218C/Mount.txt",
+		"/E/Documents/mydocument/insect/南米論文/南米調査項目.txt",
+		"/E/Documents/mydocument/BROTHER/arrange.py",
+		"/E/Documents/mydocument/BROTHER/rotated_arranged_row.txt",
+		"/E/Documents/mydocument/BROTHER/rotated.txt",
+		"/E/Documents/OpenHouse_ISI_questionnaire.txt",
+		"/E/Documents/mydocument/BROTHER/rotated_arranged.txt",
+		"/E/Documents/mydocument/BROTHER/japanese.txt",
+		"/E/Documents/mydocument/insect/山行装備.txt",
+		"/C/Users/hiromi/Desktop/sony_intern.txt",
+		"/C/Users/hiromi/Desktop/注文.txt",
+		"/E/Documents/mydocument/BROTHER/English.txt",
+		"/E/Documents/google_analytics_wordpress.txt",
+		"/E/Documents/mydocument/insect/ヒゲナガガ.txt",
+		"/C/Windows/System32/drivers/etc/hosts"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"GUI",
+			"OnGUI"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/Script/CubeControl.cs.meta",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 263,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Assets/Script/CubeControl.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 474,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								375,
+								375
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": false,
+							"oops":
+							{
+								"172,177": "Name should have prefix '_'. (Rule 'Fields').",
+								"19,24": "Using directive is not used by code and can be removed safely.",
+								"224,233": "Name should have prefix '_'. (Rule 'Fields')."
+							},
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 292.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 206.0
+	},
+	"output.variable_get":
+	{
+		"height": 90.0
+	},
+	"pinned_build_system": "",
+	"project": "test1.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"re",
+				"C:\\Users\\hiromi\\AppData\\Roaming\\Sublime Text 3\\Packages\\User\\make_run.sublime-build"
+			],
+			[
+				"ali",
+				"C:\\Users\\hiromi\\script\\aoj\\Introduction\\Library_of_Computational_Geometry\\projection.cpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 247.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
