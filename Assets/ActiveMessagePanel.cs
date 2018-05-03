@@ -1,4 +1,4 @@
-﻿    
+    
 using UnityEngine;
 using System.Collections;
     
@@ -32,7 +32,7 @@ public class ActiveMessagePanel : MonoBehaviour {
             messageScript.SetMessagePanel(message);
         }
 
-        if (    Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 

@@ -111,7 +111,7 @@ public class Message : MonoBehaviour {
     
             //　マウスクリックされたら次の文字表示処理
             if(Input.GetMouseButtonDown(0)) {
-                Debug.Log (messageText.text.Length);
+                // Debug.Log (messageText.text.Length);
                 messageText.text = "";
                 nowLine = 0;
                 clickIcon.enabled = false;
