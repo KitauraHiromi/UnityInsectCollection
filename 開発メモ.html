@@ -721,4 +721,236 @@ pre {
   position: relative;
   border-color: #4078c0;
 }
-</style><title>開発メモ</title></head><body><article class="markdown-body"></article></body></html>
+</style><title>開発メモ</title></head><body><article class="markdown-body">
+<ul>
+<li><a href="#%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE">作りたいもの</a></li>
+<li><a href="#%E5%AE%9F%E8%A3%85%E4%B8%AD">実装中</a></li>
+<li><a href="#gameobjectfind">GameObject.Find</a></li>
+<li><a href="#example-scene">Example Scene</a></li>
+<li><a href="#%E8%9D%B6%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E6%A7%8B%E6%88%90%E8%A6%81%E7%B4%A0">蝶オブジェクトの構成要素</a></li>
+<li>
+<a href="#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8gui">メッセージGUI</a>
+<ul>
+<li><a href="#%E5%A4%96%E8%A6%B3">外観</a></li>
+<li><a href="#%E5%AE%9F%E8%A3%85">実装</a></li>
+<li><a href="#event-trigger%E3%81%AB%E3%82%88%E3%82%8B%E5%AE%9F%E8%A3%85">Event Triggerによる実装</a></li>
+</ul>
+</li>
+<li>
+<a href="#%E8%9D%B6%E3%81%AE%E5%8B%95%E3%81%8D">蝶の動き</a>
+<ul>
+<li><a href="#%E7%A7%BB%E5%8B%95%E3%81%AE%E5%AE%9F%E8%A3%85">移動の実装</a></li>
+<li>
+<a href="#%E3%81%B2%E3%82%89%E3%81%B2%E3%82%89%E3%81%99%E3%82%8B%E5%8B%95%E3%81%8D%E3%81%AE%E5%AE%9F%E8%A3%85">ひらひらする動きの実装</a>
+<ul>
+<li><a href="#%E3%82%A8%E3%83%A9%E3%83%BC%E5%86%85%E5%AE%B9-animationevent-has-no-function-name-specified">エラー内容 AnimationEvent has no function name specified!</a></li>
+</ul>
+</li>
+<li><a href="#asset%E4%BD%9C%E3%82%8A">Asset作り</a></li>
+</ul>
+</li>
+<li>
+<a href="#%E3%82%B2%E3%83%BC%E3%83%A0%E7%A9%BA%E9%96%93%E3%81%AE%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E6%92%AE%E5%BD%B1">ゲーム空間のスクリーンショット撮影</a>
+<ul>
+<li>
+<a href="#%E4%B8%BB%E8%A6%B3%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%B8%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88">主観カメラへの切り替え</a>
+<ul>
+<li><a href="#%E5%88%87%E6%9B%BF%E6%99%82%E3%81%AE%E3%82%AB%E3%83%A1%E3%83%A9%E6%8C%99%E5%8B%95">切替時のカメラ挙動</a></li>
+<li><a href="#%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%82%A4%E3%83%B3%E3%83%BB%E3%82%BA%E3%83%BC%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88">カメラのズームイン・ズームアウト</a></li>
+<li><a href="#%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%8B%E3%82%89%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88">カメラからスクリーンショット</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#unity%E3%81%A1%E3%82%83%E3%82%93%E3%81%AE%E6%8C%99%E5%8B%95">Unityちゃんの挙動</a></li>
+</ul>
+
+<h1>
+<a id="user-content-作りたいもの" class="anchor" href="#%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>作りたいもの</h1>
+<p>手に蝶が乗ってひらひらする<br>
+<a href="https://twitter.com/SIitherinn/status/983708984812167168" rel="nofollow">https://twitter.com/SIitherinn/status/983708984812167168</a><br>
+これをGW開けまでに作る.</p>
+<h1>
+<a id="user-content-実装中" class="anchor" href="#%E5%AE%9F%E8%A3%85%E4%B8%AD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>実装中</h1>
+<ol>
+<li>蝶をクリックすると説明が出る.</li>
+<li>蝶がひらひら動く.</li>
+</ol>
+<h1>
+<a id="user-content-gameobjectfind" class="anchor" href="#gameobjectfind" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GameObject.Find</h1>
+<p>Hierarchyから引数と同じ名前のオブジェクトを取得する.</p>
+<pre><code>例
+GameObject messagepanel;
+messagepanel = GameObject.Find( "ActiveMessagePanel" )
+とすると、messagepanelにActiveMessagePanelのオブジェクトが参照され格納される.
+</code></pre>
+<h1>
+<a id="user-content-example-scene" class="anchor" href="#example-scene" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Scene</h1>
+<p>Grass and Flower pack 1のシーン<br>
+これにオブジェクトを設置して作っている</p>
+<h1>
+<a id="user-content-蝶オブジェクトの構成要素" class="anchor" href="#%E8%9D%B6%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E6%A7%8B%E6%88%90%E8%A6%81%E7%B4%A0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>蝶オブジェクトの構成要素</h1>
+<ol>
+<li>Animation</li>
+<li>Rigidbody</li>
+<li>Sphere Collider</li>
+<li>Cube Control(仮名)
+クリックしたらメッセージを出す.</li>
+</ol>
+<h1>
+<a id="user-content-メッセージgui" class="anchor" href="#%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8gui" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>メッセージGUI</h1>
+<h2>
+<a id="user-content-外観" class="anchor" href="#%E5%A4%96%E8%A6%B3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>外観</h2>
+<p><a href="///C://Users/Public/Documents/Unity%20Projects/test1/figure/messageUI.png" target="_blank"><img src="///C://Users/Public/Documents/Unity%20Projects/test1/figure/messageUI.png" alt="messageUI" title="messageUI" style="max-width:100%;"></a><br>
+階層構造はこんなかんじ<br>
+<a href="///C://Users/Public/Documents/Unity%20Projects/test1/figure/messageUIarchitecture.png" target="_blank"><img src="///C://Users/Public/Documents/Unity%20Projects/test1/figure/messageUIarchitecture.png" alt="messageUI" title="messageUI architecture" style="max-width:100%;"></a></p>
+<p>パラメータ:</p>
+<pre><code>Panel
+stretch-stretch
+Left 10, Top 200, Pos Z 0
+Right 10, Bottom 10
+
+Text
+stretch-stretch
+Left 10, Top 10, Pos Z 10
+Right 10, Bottom 10
+
+Image
+stretch-stretch
+Left 400, Top 95, Pos Z 0
+Right 10, Bottom 10
+</code></pre>
+<p>参考: <a href="https://gametukurikata.com/program/rpgmessage" rel="nofollow">https://gametukurikata.com/program/rpgmessage</a></p>
+<h2>
+<a id="user-content-実装" class="anchor" href="#%E5%AE%9F%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>実装</h2>
+<p>ActiveMessagePanel.cs</p>
+<pre><code>using UnityEngine;
+using System.Collections;
+public class ActiveMessagePanel : MonoBehaviour {
+    //　MessageUIに設定されているMessageスクリプトを設定
+    [SerializeField]
+    private Message messageScript;
+    private GameObject refObj;
+    public string cubeTag="Cube";
+    Ray ray;
+    RaycastHit hit = new RaycastHit();
+    // Update is called once per frame
+    void Update () {
+        if (Input.GetMouseButtonDown(0))
+        {
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //マウスクリックした場所からRayを飛ばし、オブジェクトがあればtrue 
+            if (Physics.Raycast(ray.origin, ray.direction, out hit, Mathf.Infinity))
+            {
+                if(hit.collider.gameObject.CompareTag(cubeTag))
+                {
+                    // cubeControlクラスにmessageScriptオブジェクトを渡して，定められたメッセージを表示する.
+                    hit.collider.gameObject.GetComponent&lt;CubeControl&gt;().OnUserAction(messageScript);
+                }
+            }
+        }
+    }
+}
+</code></pre>
+<p>CubeControl.cs</p>
+<pre><code>using UnityEngine;
+using System.Collections;
+[RequireComponent(typeof(Rigidbody))]
+public class CubeControl : MonoBehaviour {
+    private string message = "テストメッセージ\n"
+    + "ここに種ごとの説明が入る予定\n";
+    public void OnUserAction(Message messageScript)
+    {
+        messageScript.SetMessagePanel(message);
+    }
+}
+</code></pre>
+<h2>
+<a id="user-content-event-triggerによる実装" class="anchor" href="#event-trigger%E3%81%AB%E3%82%88%E3%82%8B%E5%AE%9F%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Event Triggerによる実装</h2>
+<p><a href="http://tech.pjin.jp/blog/2017/09/03/unity_event-trigger/" rel="nofollow">http://tech.pjin.jp/blog/2017/09/03/unity_event-trigger/</a><br>
+注意：クラス名とファイル名，アセット名はすべて同じにしなければならない？<br>
+EventTriggerTest.csをbutterflyに設定してDebug.Logでメッセージを出そうとしてもうまくいかない<br>
+カメラから見て画面手前にあるPanelに同じことをするとDebug.Logのメッセージが表示される.<br>
+つまり，EventTriggerがPanelに反応してしまい，奥のbutterflyにイベント判定が向かない？<br>
+今のところは，Colliderを手書きしてやる必要がありそう．<br>
+ソースコードが煩雑になるが，今の所他に手はない.</p>
+<h1>
+<a id="user-content-蝶の動き" class="anchor" href="#%E8%9D%B6%E3%81%AE%E5%8B%95%E3%81%8D" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>蝶の動き</h1>
+<p>Control.csのUpdateで以下のように，変更すれば位置を変更できる．</p>
+<pre><code>絶対位置
+this.transform.position += new Vector3(x, y, z);
+相対位置
+this.transform.localPosition += new Vector3(x, y, z);
+</code></pre>
+<p>Unityのランダムは以下のように用いる．</p>
+<pre><code>float x = Random.Range(-0.1f, 0.1f);
+</code></pre>
+<p>向いている方向に移動する</p>
+<pre><code>this.transform.rotation = Quaternion.LookRotation(new Vector3(x, y, -z));
+this.transform.position += new Vector3(x, y, z);
+
+[Reference]
+Quaternion.Slerp(quaternion rot1, quaternion rot2, float vel)
+rot1からrot2へ球形にクオータニオンを補間し，なめらかに方向転換させる．しかし，外力が加わったとき回転が不安定になりやすい．
+Quaternion.LookRotation(Vector3 forward, Vector3 upwards)
+forwardをZ+方向に，upwardsをY+方向に変換するクオータニオンを返す
+</code></pre>
+<h2>
+<a id="user-content-移動の実装" class="anchor" href="#%E7%A7%BB%E5%8B%95%E3%81%AE%E5%AE%9F%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>移動の実装</h2>
+<p>グローバルな移動と，ローカルな移動を組み合わせる．<br>
+グローバルな移動は関数による実装，ローカルな移動はアニメーションで実装する.</p>
+<h2>
+<a id="user-content-ひらひらする動きの実装" class="anchor" href="#%E3%81%B2%E3%82%89%E3%81%B2%E3%82%89%E3%81%99%E3%82%8B%E5%8B%95%E3%81%8D%E3%81%AE%E5%AE%9F%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ひらひらする動きの実装</h2>
+<p><a href="http://indie-du.com/entry/2016/05/15/090000" rel="nofollow">http://indie-du.com/entry/2016/05/15/090000</a><br>
+メッシュモデル，関節などを設定したあと，unityでキーフレームを設定することで動きを作れるっぽい  <a href="https://techacademy.jp/magazine/9284" rel="nofollow">https://techacademy.jp/magazine/9284</a><br>
+Animationの作り方<br>
+<a href="http://www.atmarkit.co.jp/ait/articles/1411/20/news045_2.html" rel="nofollow">http://www.atmarkit.co.jp/ait/articles/1411/20/news045_2.html</a></p>
+<p>・ 座標(x, y, z)に進み，止まる動きを実装<br>
+[animation]<br>
+移動中:flapping_A<br>
+静止中:flapping_B</p>
+<p>[animator]<br>
+<a href="///C://Users/Public/Documents/Unity%20Projects/test1/figure/animator.png" target="_blank"><img src="///C://Users/Public/Documents/Unity%20Projects/test1/figure/animator.png" alt="messageUI" title="アニメーション遷移" style="max-width:100%;"></a><br>
+<a href="///C://Users/Public/Documents/Unity%20Projects/test1/figure/animation_transition.png" target="_blank"><img src="///C://Users/Public/Documents/Unity%20Projects/test1/figure/animation_transition.png" alt="messageUI" title="遷移条件" style="max-width:100%;"></a><br>
+目的地に近づき一定距離以内になったとき，IsRoostがtrueになりflappingからroostに遷移する</p>
+<h3>
+<a id="user-content-エラー内容-animationevent-has-no-function-name-specified" class="anchor" href="#%E3%82%A8%E3%83%A9%E3%83%BC%E5%86%85%E5%AE%B9-animationevent-has-no-function-name-specified" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>エラー内容 AnimationEvent has no function name specified!</h3>
+<p><a href="///C://Users/Public/Documents/Unity%20Projects/test1/figure/unity_animator_6_ss3-300x96.png" target="_blank"><img src="///C://Users/Public/Documents/Unity%20Projects/test1/figure/unity_animator_6_ss3-300x96.png" alt="messageUI" title="AnimationEvent" style="max-width:100%;"></a><br>
+AnimationEventに関数を設定することで，そのタイミングで関数を呼び出すことができる.<br>
+AnimationEventを作っておいて，それに関数を設定しなければこのエラーが出る.</p>
+<h2>
+<a id="user-content-asset作り" class="anchor" href="#asset%E4%BD%9C%E3%82%8A" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Asset作り</h2>
+<p>人形モデル<br>
+メッシュモデルを作ってBlenderで関節を埋め込んで動かす.<br>
+全体 <a href="http://takashicompany.hatenablog.com/entry/2013/11/10/215814" rel="nofollow">http://takashicompany.hatenablog.com/entry/2013/11/10/215814</a>
+Blender使い方 <a href="http://nn-hokuson.hatenablog.com/entry/2017/10/03/205639" rel="nofollow">http://nn-hokuson.hatenablog.com/entry/2017/10/03/205639</a><br>
+Blenderハマりポイント <a href="https://twitter.com/HomeMasisi/status/633614935897968641" rel="nofollow">https://twitter.com/HomeMasisi/status/633614935897968641</a><br>
+結局できていない</p>
+<h1>
+<a id="user-content-ゲーム空間のスクリーンショット撮影" class="anchor" href="#%E3%82%B2%E3%83%BC%E3%83%A0%E7%A9%BA%E9%96%93%E3%81%AE%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%E6%92%AE%E5%BD%B1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ゲーム空間のスクリーンショット撮影</h1>
+<h2>
+<a id="user-content-主観カメラへの切り替え" class="anchor" href="#%E4%B8%BB%E8%A6%B3%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%B8%E3%81%AE%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>主観カメラへの切り替え</h2>
+<p><a href="http://tech.pjin.jp/blog/2017/06/25/unity_first-person-camera/" rel="nofollow">http://tech.pjin.jp/blog/2017/06/25/unity_first-person-camera/</a>
+スペースキーで切り替えられるよう実装した.</p>
+<h3>
+<a id="user-content-切替時のカメラ挙動" class="anchor" href="#%E5%88%87%E6%9B%BF%E6%99%82%E3%81%AE%E3%82%AB%E3%83%A1%E3%83%A9%E6%8C%99%E5%8B%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>切替時のカメラ挙動</h3>
+<ol>
+<li>メインカメラは回転位置を記憶.</li>
+<li>主観カメラは切替時に回転位置を正面に戻す．
+カメラはunitychanの子オブジェクトとして実装されているので，正面方向は常に同じ相対方向Vector3(0, 0, 1)で表される．<br>
+よって切替時に主観カメラのlocalRotationにQuaternion.LookRotation(new Vector3(0, 0, 1))を代入すれば良い．<br>
+その時，localPositionも同時に代入する．</li>
+</ol>
+<h3>
+<a id="user-content-カメラのズームインズームアウト" class="anchor" href="#%E3%82%AB%E3%83%A1%E3%83%A9%E3%81%AE%E3%82%BA%E3%83%BC%E3%83%A0%E3%82%A4%E3%83%B3%E3%82%BA%E3%83%BC%E3%83%A0%E3%82%A2%E3%82%A6%E3%83%88" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>カメラのズームイン・ズームアウト</h3>
+<p>未実装</p>
+<p>###カメラからスクリーンショット
+未実装</p>
+<h1>
+<a id="user-content-unityちゃんの挙動" class="anchor" href="#unity%E3%81%A1%E3%82%83%E3%82%93%E3%81%AE%E6%8C%99%E5%8B%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Unityちゃんの挙動</h1>
+<ol>
+<li>UnityChanControlScriptWithRgidBody.csをいじってジャンプ無効化</li>
+<li>
+</li>
+</ol>
+</article></body></html>
