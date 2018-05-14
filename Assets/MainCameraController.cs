@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class MainCameraController : MonoBehaviour {
 
@@ -10,10 +11,13 @@ public class MainCameraController : MonoBehaviour {
     private GameObject ThirdPersonCamera;   // インスペクターで第三者視点カメラを紐づける
      
     GameObject targetObj;
-    Vector3 targetPos;
+    Vector3 targetPos, centerPos;
     Quaternion MainCameraRotation, ThirdPersonCameraRotation, moveForward;
-    float minAngle, maxAngle, speed;
-
+    float minAngleY, maxAngleY, minAngleX, maxAngleX, speed;
+    int directionX, directionY;
+    Texture2D texture;
+    bool grab;
+    string filepath;
 
     void Start () {
         // 操作キャラクタの指定，位置，正面方向の取得
@@ -21,11 +25,27 @@ public class MainCameraController : MonoBehaviour {
         targetPos = targetObj.transform.position;
         moveForward = targetObj.transform.rotation;
         ThirdPersonCameraRotation = ThirdPersonCamera.transform.rotation;
-        minAngle = -90;
-        maxAngle = 90;
+        minAngleY = -180;
+        maxAngleY = 180;
+        minAngleX = -90f;
+        maxAngleX = 90f;
         speed = 5f;
+        directionX = -1;
+        directionY = 1;
+        texture = new Texture2D(Screen.width, Screen.height);
+        grab = false;
+        filepath = "tmp.png";
     }
-    
+
+    private void OnPostRender(){
+        if(grab){
+            texture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+            texture.Apply();
+            byte [] img = texture.EncodeToPNG();
+            File.WriteAllBytes(filepath, img);
+            grab = false;
+        }
+    }
 
     // void FixedUpdate() {
     //     // キャラクターの向きは、サードパーソンカメラが有効な時だけ変更する
@@ -37,7 +57,6 @@ public class MainCameraController : MonoBehaviour {
     void Update() {
         // スペースキーでカメラを切り替える
         if (Input.GetKeyDown(KeyCode.Space)) {
-                            // ↓現在のactive状態から反転 
             MainCamera.SetActive(!MainCamera.activeInHierarchy);
             ThirdPersonCamera.SetActive(!ThirdPersonCamera.activeInHierarchy);
             // MainCamera.transform.rotation = moveForward;
@@ -46,37 +65,33 @@ public class MainCameraController : MonoBehaviour {
             ThirdPersonCamera.transform.localPosition = new Vector3(0, 0.5f, 3f);
         }
 
-        // Cameraはunitychanの子要素なので，targetの移動量分、自分（カメラ）も移動するスクリプトを書く必要はない
-        // transform.position += targetObj.transform.position - targetPos;
-        targetPos = targetObj.transform.position;
-        moveForward = targetObj.transform.rotation;
-     
+        // マウスでカメラ位置を移動する
         if (Input.GetMouseButton(1)) {
             // マウスの移動量
-            // float mouseInputX = Input.GetAxis("Mouse X");
-            // float mouseInputY = Input.GetAxis("Mouse Y");
+            float yaw = Input.GetAxis("Mouse X");
+            float roll = Input.GetAxis("Mouse Y");
 
-
-            float turn = Input.GetAxis("Mouse X");
             float rotateY = (transform.localRotation.eulerAngles.y > 180) ? transform.localRotation.eulerAngles.y - 360 : transform.localRotation.eulerAngles.y;
-            float angleY = Mathf.Clamp(rotateY + turn * speed, minAngle, maxAngle);
+            float rotateX = (transform.localRotation.eulerAngles.x > 180) ? transform.localRotation.eulerAngles.x - 360 : transform.localRotation.eulerAngles.x;
+
+            float angleY = Mathf.Clamp(rotateY + yaw * speed, minAngleY, maxAngleY);
+            float angleX = Mathf.Clamp(rotateX + roll * speed, minAngleX, maxAngleX);
             // 回転角度を-180～180から0～360に変換
             angleY = (angleY < 0) ? angleY + 360 : angleY;
-            // 回転角度をオブジェクトに適用
-            // transform.localRotation = Quaternion.Euler(0, angleY, 0);
-            transform.RotateAround(targetPos, Vector3.up, angleY - transform.localRotation.eulerAngles.y);
-
-
-            // targetの位置のY軸を中心に、回転（公転）する
-            // if (ThirdPersonCamera.activeInHierarchy) {
-            //     ThirdPersonCamera.transform.RotateAround(targetPos, Vector3.up, mouseInputX * Time.deltaTime * 200f);
-            // }
-            // else if (MainCamera.activeInHierarchy) {
-            //     MainCamera.transform.RotateAround(targetPos, Vector3.up, mouseInputX * Time.deltaTime * 200f);
-            // }
-            // カメラの垂直移動(-90~+90)
-
-            // transform.RotateAround(targetPos, transform.right, mouseInputY * Time.deltaTime * 200f);
+            angleX = (angleX < 0) ? angleX + 360 : angleX;
+            
+            if (MainCamera.activeInHierarchy){
+                centerPos = targetObj.transform.position;
+                centerPos.y += 1;
+            }else{
+                centerPos = ThirdPersonCamera.transform.position;
+            }
+            transform.RotateAround(centerPos, directionY * Vector3.up, angleY - transform.localRotation.eulerAngles.y);
+            transform.RotateAround(centerPos, directionX * transform.right, angleX - transform.localRotation.eulerAngles.x);
+        }
+        // キー入力でスクリーンショットを撮る
+        if(Input.GetKeyDown(KeyCode.Z)){
+            grab = true;
         }
     }
 }

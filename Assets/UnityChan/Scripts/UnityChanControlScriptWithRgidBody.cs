@@ -25,6 +25,8 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 	public float forwardSpeed = 7.0f;
 	// 後退速度
 	public float backwardSpeed = 2.0f;
+	// 横移動速度
+	public float lateralSpeed = 0.05f;
 	// 旋回速度
 	public float rotateSpeed = 2.0f;
 	// ジャンプ威力
@@ -106,9 +108,14 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 		// 上下のキー入力でキャラクターを移動させる
 		transform.localPosition += velocity * Time.fixedDeltaTime;
 
-		// 左右のキー入力でキャラクタをY軸で旋回させる
-		transform.Rotate(0, h * rotateSpeed, 0);	
-	
+		
+		if (Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.LeftControl)){
+			// ctrlが押されている間は，左右移動
+			transform.localPosition += transform.TransformDirection(new Vector3(h * 0.05f, 0, 0));
+		}else{
+			// 左右のキー入力でキャラクタをY軸で旋回させる
+			transform.Rotate(0, h * rotateSpeed, 0);	
+		}
 
 		// 以下、Animatorの各ステート中での処理
 		// Locomotion中
