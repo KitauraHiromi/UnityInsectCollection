@@ -1,5 +1,16 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+
+public struct Param{
+    string tag;
+    int size;
+
+    public Param(string _tag, int _size){
+        tag = _tag;
+        size = _size;
+    }
+}
 
 [RequireComponent(typeof(Rigidbody))]
 public class CubeControl : MonoBehaviour {
@@ -12,6 +23,8 @@ public class CubeControl : MonoBehaviour {
     private float speed, radius, yPosition;
     private CharacterController characterController;
     private Animator animator;
+    static string tag = "test";
+    public Param param = new Param(tag, 1);
 
     private string message = "テストメッセージ\n"
     + "ここに種ごとの説明が入る予定\n";
@@ -51,7 +64,7 @@ public class CubeControl : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        speed = 1.0f;
+        speed = 0.1f;
         radius = 0.3f;
         characterController = GetComponent <CharacterController> ();
         animator = GetComponent <Animator> ();
@@ -65,7 +78,7 @@ public class CubeControl : MonoBehaviour {
         Vector3 plane = new Vector3(0, -1, 0);
 
         if (dist > 0.5){
-            SpeedControl(dist, 1.0f);
+            // SpeedControl(Math.Min(dist, 0.3f) , 1.0f);
             GoToDestination(new Vector3(0, 0, 0));
         }
         else{
@@ -78,5 +91,12 @@ public class CubeControl : MonoBehaviour {
     public void OnUserAction(Message messageScript)
     {
         messageScript.SetMessagePanel(message);
+    }
+
+    public void OnCollisionEnter(Collision col)
+    {
+        // 捕まえた個体をどう管理する？
+        // col.gameObject.collected.push_back(param);
+        Destroy(this.gameObject);
     }
 }
