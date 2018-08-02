@@ -1,16 +1,8 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
-public struct Param{
-    string tag;
-    int size;
-
-    public Param(string _tag, int _size){
-        tag = _tag;
-        size = _size;
-    }
-}
 
 [RequireComponent(typeof(Rigidbody))]
 public class CubeControl : MonoBehaviour {
@@ -19,12 +11,16 @@ public class CubeControl : MonoBehaviour {
     // GameObject messagepanel;
     // public Vector3 force = new Vector3(0, 10, 0);
     // public ForceMode forceMode = ForceMode.VelocityChange;
-
+    private GameObject refObj;
     private float speed, radius, yPosition;
-    private CharacterController characterController;
+    // private CharacterController characterController;
+    CollectionDatabase database;
+    List<InsectParam> collection;
     private Animator animator;
+    static string name = "test";
     static string tag = "test";
-    public Param param = new Param(tag, 1);
+    bool flag = false;
+    public InsectParam param = new InsectParam(name, tag, 1);
 
     private string message = "テストメッセージ\n"
     + "ここに種ごとの説明が入る予定\n";
@@ -66,9 +62,13 @@ public class CubeControl : MonoBehaviour {
     void Start () {
         speed = 0.1f;
         radius = 0.3f;
-        characterController = GetComponent <CharacterController> ();
+        // characterController = GetComponent <CharacterController> ();
         animator = GetComponent <Animator> ();
         animator.SetBool("IsRoost", false);
+        refObj = GameObject.Find( "Database" );
+        database = refObj.GetComponent <CollectionDatabase> ();
+        collection = database.collection;
+        if(collection == null) Debug.Log("null");
     }
 
     void Update(){
@@ -93,10 +93,11 @@ public class CubeControl : MonoBehaviour {
         messageScript.SetMessagePanel(message);
     }
 
-    public void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
     {
-        // 捕まえた個体をどう管理する？
-        // col.gameObject.collected.push_back(param);
+        // 捕まえた個体のパラメータをデータベースオブジェクトに格納
+        collection.Add(param);
+        // 捕まえた個体を削除
         Destroy(this.gameObject);
     }
 }
