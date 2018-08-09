@@ -1,0 +1,3 @@
+[submodule "Assets/UnityEffectSample"]
+	path = Assets/UnityEffectSample
+	url = https://github.com/ktkkumamoto/UnityEffectSample.git
