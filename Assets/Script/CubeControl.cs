@@ -11,7 +11,7 @@ public class CubeControl : MonoBehaviour {
     // GameObject messagepanel;
     // public Vector3 force = new Vector3(0, 10, 0);
     // public ForceMode forceMode = ForceMode.VelocityChange;
-    private GameObject refObj;
+    private GameObject refObj, effObj;
     private float speed, radius, yPosition;
     // private CharacterController characterController;
     CollectionDatabase database;
@@ -66,6 +66,8 @@ public class CubeControl : MonoBehaviour {
         animator = GetComponent <Animator> ();
         animator.SetBool("IsRoost", false);
         refObj = GameObject.Find( "Database" );
+        effObj = GameObject.Find( "Eff_Hit_1" );
+        effObj.gameObject.SetActive(false);
         database = refObj.GetComponent <CollectionDatabase> ();
         collection = database.collection;
         if(collection == null) Debug.Log("null");
@@ -79,7 +81,7 @@ public class CubeControl : MonoBehaviour {
 
         if (dist > 0.5){
             // SpeedControl(Math.Min(dist, 0.3f) , 1.0f);
-            GoToDestination(new Vector3(0, 0, 0));
+            GoToDestination(new Vector3(48f, 5.5f, 54f));
         }
         else{
             Roost(plane);
@@ -93,11 +95,19 @@ public class CubeControl : MonoBehaviour {
         messageScript.SetMessagePanel(message);
     }
 
+    IEnumerator sleep(){ 
+        Debug.Log("start");
+        yield return new WaitForSeconds(1f);
+        Debug.Log("10seconds");
+    }
+
     void OnCollisionEnter(Collision col)
     {
         // 捕まえた個体のパラメータをデータベースオブジェクトに格納
         collection.Add(param);
         // 捕まえた個体を削除
         Destroy(this.gameObject);
+        effObj.gameObject.transform.position = this.gameObject.transform.position;
+        effObj.gameObject.SetActive(true);
     }
 }
