@@ -50,6 +50,7 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 	static int locoState = Animator.StringToHash("Base Layer.Locomotion");
 	static int jumpState = Animator.StringToHash("Base Layer.Jump");
 	static int restState = Animator.StringToHash("Base Layer.Rest");
+	static int attackState = Animator.StringToHash("Base Layer.Attack");
 
 // 初期化
 	void Start ()
@@ -91,19 +92,21 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 			velocity *= backwardSpeed;	// 移動速度を掛ける
 		}
 		
-		// if (Input.GetButtonDown("Jump")) {	// スペースキーを入力したら
+		if (Input.GetButtonDown("Jump")) {	// スペースキーを入力したら
 
-		// 	//アニメーションのステートがLocomotionの最中のみジャンプできる
-		// 	if (currentBaseState.nameHash == locoState){
-		// 		//ステート遷移中でなかったらジャンプできる
-		// 		if(!anim.IsInTransition(0))
-		// 		{
-		// 				rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
-		// 				anim.SetBool("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
-		// 		}
-		// 	}
-		// }
-		
+			//アニメーションのステートがLocomotionの最中のみジャンプできる
+			if (currentBaseState.nameHash == locoState){
+				//ステート遷移中でなかったらジャンプできる
+				if(!anim.IsInTransition(0))
+				{
+						rb.AddForce(Vector3.up * jumpPower, ForceMode.VelocityChange);
+						anim.SetBool("Jump", true);		// Animatorにジャンプに切り替えるフラグを送る
+				}
+			}
+		}
+		if (Input.GetButtonDown ("Fire1")) {
+			anim.SetBool("Attack_Trigger", true);
+		}
 
 		// 上下のキー入力でキャラクターを移動させる
 		transform.localPosition += velocity * Time.fixedDeltaTime;
@@ -168,7 +171,7 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 			}
 		}
 		// IDLE中の処理
-		// 現在のベースレイヤーがidleStateの時
+		// 現在のベースレイヤーがidleの時
 		else if (currentBaseState.nameHash == idleState)
 		{
 			//カーブでコライダ調整をしている時は、念のためにリセットする
@@ -189,6 +192,18 @@ public class UnityChanControlScriptWithRgidBody : MonoBehaviour
 			if(!anim.IsInTransition(0))
 			{
 				anim.SetBool("Rest", false);
+			}
+		}
+
+		// ATTACK中の処理
+		// 現在のベースレイヤーがattackの時
+		else if (currentBaseState.nameHash == attackState)
+		{
+			// ステートが遷移中でない場合、Rest bool値をリセットする（ループしないようにする）
+			if(!anim.IsInTransition(0))
+			{
+				velocity = Vector3.zero;
+				anim.SetBool("Attack_Trigger", false);
 			}
 		}
 	}
